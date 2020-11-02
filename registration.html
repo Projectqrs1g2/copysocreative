@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<title>Register</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="sidebar/w3_sidebar.css">
+<link rel="stylesheet" href="regis_form/regis.css">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<body>
+
+<div class="w3-sidebar_regis w3-bar-block w3-card w3-animate-right" style="display:none;right:0;" id="rightMenu">
+  <button onclick="closeRightMenu()" class="w3-bar-item w3-button w3-large" >&times;</button>
+  <div  align-top="10">
+     <p><button onclick="document.location='home.html'" id="sidebar_homeregis" href="home.html" class="fa fa-home "> HOME</button></p>
+
+  </div>
+  <div align-top="10">
+     <p><button onclick="document.location='home.html'" id="sidebar_signinregis" href="registration.html" class="fa fa-lock "> SIGN IN</button></p>
+  </div>
+ 
+</div>
+
+<div class="w3-teal"></div>
+  <button class="w3-button w3-teal_regis w3-xlarge w3-right" onclick="openRightMenu()">&#9776;</button>
+  <div id= "bgnameregis" align="center">
+    <font size="5"><b> REGISTRATION</b></font>   
+</div>
+
+
+ <!-- contact -->
+<div class="container">
+  <p><h3><font color=#CC0033 size="5" ><br><b>Registration</b></br></font></h3></p>
+
+  <form action="/action_page.php">
+    <label for="fname">Email</label>
+    <input type="text" id="email" name="firstname" placeholder="Your Email..">
+
+    <label for="lname">Fist Name</label>
+    <input type="text" id="fname" name="lastname" placeholder="Your First Name..">
+
+    <label for="lname">Last Name</label>
+    <input type="text" id="lname" name="lastname" placeholder="Your Last Name..">
+
+    <label for="lname">Student ID</label>
+    <input type="text" id="stid" name="lastname" placeholder="Your Student ID..">
+
+    <label for="lname">Password</label>
+    <input type="text" id="pass" name="lastname" placeholder="Your Password..">
+
+    <label for="country">Confirm Password</label>
+    <input type="text" id="cpass" name="lastname" placeholder="Confirm Your Password..">
+
+
+    <input type="submit" value="Submit">
+  </form>
+</div>
+
+    
+<script type="text/javascript" src="sidebar/sidebar.js"></script>    
+</body>
+</html>
