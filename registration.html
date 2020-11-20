@@ -16,7 +16,7 @@
 
   </div>
   <div align-top="10">
-     <p><button onclick="document.location='home.html'" id="sidebar_signinregis" href="registration.html" class="fa fa-lock "> SIGN IN</button></p>
+     <p><button onclick="document.location='qrlseu.html'" id="sidebar_signinregis" href="registration.html" class="fa fa-lock "> SIGN IN</button></p>
   </div>
  
 </div>
@@ -32,24 +32,25 @@
 <div class="container">
   <p><h3><font color=#CC0033 size="5" ><br><b>Registration</b></br></font></h3></p>
 
-  <form action="/action_page.php">
-    <label for="fname">Email</label>
-    <input type="text" id="email" name="firstname" placeholder="Your Email..">
+  <FORM name="frm" action="/action_page.php" method="post" enctype="multipart/form-data">
 
-    <label for="lname">Fist Name</label>
-    <input type="text" id="fname" name="lastname" placeholder="Your First Name..">
+    <label for="email">Email</label>
+    <input type="text" id="Emailre" name="email" onchange="Checkemail('Emailre');" placeholder="Your Email.. " onkeypress="return handleEnter(this, event)">
+    
+    <label for="fname">Fist Name</label>
+    <input type="text" id="fnamere" name="firstname" placeholder="Your First Name.." onkeypress="return handleEnter(this, event)">
 
     <label for="lname">Last Name</label>
-    <input type="text" id="lname" name="lastname" placeholder="Your Last Name..">
+    <input type="text" id="lnamere" name="lastname" placeholder="Your Last Name.." onkeypress="return handleEnter(this, event)">
 
-    <label for="lname">Student ID</label>
-    <input type="text" id="stid" name="lastname" placeholder="Your Student ID..">
+    <label for="stid">Student ID</label>
+    <input type="text" id="stidre" name="stid" placeholder="Your Student ID.." onkeypress="return handleEnter(this, event)">
 
-    <label for="lname">Password</label>
-    <input type="text" id="pass" name="lastname" placeholder="Your Password..">
+    <label for="pass">Password</label>
+    <input type="text" id="passre" name="pass" placeholder="Your Password.." onkeypress="return handleEnter(this, event)">
 
-    <label for="country">Confirm Password</label>
-    <input type="text" id="cpass" name="lastname" placeholder="Confirm Your Password..">
+    <label for="cpass">Confirm Password</label>
+    <input type="text" id="cpassre" name="cpass" placeholder="Confirm Your Password.." onkeypress="return handleEnter(this, event)">
 
 
     <input type="submit" value="Submit">
@@ -57,6 +58,8 @@
 </div>
 
     
-<script type="text/javascript" src="sidebar/sidebar.js"></script>    
+<script type="text/javascript" src="sidebar/sidebar.js"></script>  
+<script type="text/javascript" src="fn.js"></script>    
+
 </body>
 </html>

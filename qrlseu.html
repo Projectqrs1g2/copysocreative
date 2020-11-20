@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<title>QRLSEU</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="sidebar/w3_sidebar.css">
+<link rel="stylesheet" href="login/login.css">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+<body>
+
+<div class="w3-sidebar_home w3-bar-block w3-card w3-animate-right" style="display:none;right:0;" id="rightMenu">
+  <button onclick="closeRightMenu()" class="w3-bar-item w3-button w3-large" >&times;</button>
+  <div  align-top="10">
+    <p><button onclick="document.location='home.html'" id="sidebar_home" href="home.html" class="fa fa-home "> HOME</button></p>
+
+  </div>
+  <div align-top="10">
+     <p><button onclick="document.location='qrlseu.html'" id="sidebar_signin" href="registration.html" class="fa fa-lock "> SIGN IN</button></p>
+  </div>
+ 
+</div>
+
+<div class="w3-teal"></div>
+  <button class="w3-button w3-teal_home w3-xlarge w3-right" onclick="openRightMenu()">&#9776;</button>
+  <div id= "bgnamehome" align="center">
+    <font size="5"><b> QRLSEU </b></font>   
+</div>
+
+<!-- login -->
+<div class="container">
+  <form action="/action_page.php">
+    <div class="row">
+      <h2 style="text-align:center"><font color="#009688" size="7"><b><p>SIGN IN</p></b></font></h2>
+      <div class="vl">
+        <span class="vl-innertext">or</span>
+      </div>
+
+      <div class="col">
+        <div class="hide-md-lg">
+          <p>Or sign in manually:</p>
+        </div>
+
+        <input type="text" id="emailqr" onchange="Checkemail('emailqr');" onkeypress="return handleEnter(this, event)" name="Email" placeholder="Email "  required>
+        <input type="password" onkeypress="check_CapsLock(event)" name="password" placeholder="Password" required>    
+        <div id="caps_lock" style="color:#CC0033; font-weight:bold; display:none;">
+          Caps Lock is on!!!
+        </div>
+        <input type="submit"  class="btn" id="loginsinput" value="Login Student">
+        <input type="submit"  class="btn" id="logintinput" value="Login Teacher">
+      </div>
+      
+      <div class="col">
+        <h2 style="text-align:center"><font color="#009688" size="5">Don't have an account ?</font></h2>
+
+        <a href="#" class="google btn"><i class="fa fa-google fa-fw">
+          </i> Login with Google+
+        </a>
+      </div>
+
+
+    </div>
+  </form>
+</div>
+
+<div class="bottom-container">
+  <div class="row">    
+    <div class="col">
+      <a href="#" style="color:white" class="btn">Forgot password?</a>
+    </div>
+    <div class="col">
+      <a href="#" style="color:white" class="btn">Sign up</a>
+    </div>
+
+  </div>
+
+
+</div>
+
+    
+<script type="text/javascript" src="sidebar/sidebar.js"></script> 
+<script type="text/javascript" src="fn.js"></script>    
+
+</body>
+</html>
